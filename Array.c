@@ -4,11 +4,11 @@ int main(){
     int Size;
 
     printf("Enter the size of the array: ");
-    scanf("%d", &Size);
+    scanf("%d", &Size); //10
 
-    int arr[Size];
-    int R_Arr[(Size + 1) / 2];
-    int L_Arr[Size / 2];
+    int arr[Size]; //10
+    int R_Arr[(Size + 1) / 2]; //5
+    int L_Arr[Size / 2]; //5
 
     int m = Size / 2;
 
