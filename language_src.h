@@ -85,6 +85,21 @@ typedef struct {
     } statement;
 } statement;
 
+typedef enum {
+    SCANF_INTEGER,
+    SCANF_FLAOTING_POINT,
+    SCANF_CHARACTER,
+} scanf_type;
+
+typedef struct {
+    scanf_type type;
+    union {
+        integer* integer_value;
+        floating_point* floating_point_value;
+        character* character_value;
+    } value;
+} scanf_value;
+
 typedef struct {
     character* name;
     data_type type;
@@ -100,3 +115,5 @@ void execute_statement(statement* expression);
 void execute_expression(expression* expression);
 void print_value(value value);
 void error(const char* message);
+void scanf_value_func(scanf_type type, void* value);
+void for_loop(expression* initialization, expression* condition, expression* increment, statement* for_block);
