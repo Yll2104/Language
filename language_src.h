@@ -6,7 +6,7 @@
 #include <string.h>
 #include <windows.h>
 
-#define LANGUAGE_NAME "idk"
+#define LANGUAGE_NAME "Yll & Tobi Cooperations" 
 #define LANGUAGE_BERSION "1.0"
 
 typedef int integer;
@@ -106,6 +106,12 @@ typedef struct {
     value value;
 } variable;
 
+typedef struct {
+    character* name;
+    data_type retur_type;
+    statement* body;
+} function;
+
 //funcs
 
 void init_language();
@@ -117,3 +123,17 @@ void print_value(value value);
 void error(const char* message);
 void scanf_value_func(scanf_type type, void* value);
 void for_loop(expression* initialization, expression* condition, expression* increment, statement* for_block);
+void print_statement(const char* format_string, expression* arguments);
+void function_call(const char* function_name, expression* arguments);
+
+// math functionen
+integer add(integer a, integer b);
+integer subtract(integer a, integer b);
+integer multiply(integer a, integer b);
+integer divide(integer a, integer b);
+
+floating_point add(floating_point a, floating_point b);
+floating_point subtract(floating_point a, floating_point b);
+floating_point multiply(floating_point a, floating_point b);
+floating_point divide(floating_point a, floating_point b);
+
