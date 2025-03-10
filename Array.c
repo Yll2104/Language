@@ -33,7 +33,7 @@ int main(){
     {
         printf("%d ", L_Arr[i]);
     }
-    printf("\n");
+    printf("\n");//sdfjkasödlfkj
     printf("The Right Array is: ");
     for (int i = 0; i < m; i++)
     {
