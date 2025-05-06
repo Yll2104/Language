@@ -25,7 +25,7 @@ void SimulateKeyPress(wchar_t key) {
 void TypeText(const std::wstring& text) {
     for (wchar_t c : text) {
         SimulateKeyPress(c);
-        std::this_thread::sleep_for(std::chrono::milliseconds(330)); //Typing speed
+        std::this_thread::sleep_for(std::chrono::milliseconds(190)); //Typing speed
     }
 }
 
